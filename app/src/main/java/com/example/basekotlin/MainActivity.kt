@@ -10,4 +10,11 @@ class MainActivity : AppCompatActivity() {
 
 //        dsfdsf
     }
+
+    fun returnInt(): Int {
+        return 0
+    }
+
+    fun sumNums(a: Int, b: Int) = a + b // скороченная запись для простых методов
+
 }
