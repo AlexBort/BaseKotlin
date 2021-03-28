@@ -7,5 +7,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val aInterface: TestInterface = A()
+        val bInterface: TestInterface = B()
+        // the type is common but implementation is different
     }
 }
