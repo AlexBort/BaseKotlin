@@ -1,4 +1,4 @@
-package com.example.basekotlin
+package com.example.newbasekotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,7 +8,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val mause = Mouse()
-//        mause.funA() // we couldn't see it because this method is protected
+        SuperMouse()
     }
 }
