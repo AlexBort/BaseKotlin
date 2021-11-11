@@ -8,8 +8,8 @@ class ValVarDependOnConstructor {
      */
 
     class PrimaryConstructor(val str: String) {}
-    class SecondaryConstructor{
-        constructor(val str: String) {}
-    }
+//    class SecondaryConstructor{
+//        constructor(val str: String) {}
+//    }
 
 }
