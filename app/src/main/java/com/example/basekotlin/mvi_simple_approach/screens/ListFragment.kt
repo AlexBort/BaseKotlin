@@ -5,16 +5,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import com.example.basekotlin.databinding.FragmentListBinding
+import com.example.basekotlin.mvi_simple_approach.mvi_on_mvvm.ListViewModel
 
 class ListFragment : Fragment() {
 
     private var _binding: FragmentListBinding? = null
-
-    // This property is only valid between onCreateView and
-// onDestroyView.
     private val binding get() = _binding!!
 
+    val model: ListViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,

@@ -6,7 +6,7 @@ import com.example.basekotlin.mvi_simple_approach.data.MockData
 
 class ListViewModel : ViewModel() {
 
-    val repository: ListRepository = ListRepository()
+    private val repository: ListRepository = ListRepository()
 
     fun obtainIntent(intent: BaseUserIntent) {
         when (intent) {
