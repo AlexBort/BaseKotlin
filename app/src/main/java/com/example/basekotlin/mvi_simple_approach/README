@@ -1,0 +1,9 @@
+Description
+Create an app with MVI architecture.
+It should contain 2 screens: the list of data and details screen.
+All data loaded from the mock data repository (some fake repo which returns your own list of data.
+Don't add multithreading (it will be covered in the future).
+You can decide how to organize the storing of the data on your own opinion).
+Data should contain the title and description.
+After the tap on the list element, the screen of the description should be opened.
+On this screen, the user can edit the element description and these changes should be applied to the list on the main screen.
