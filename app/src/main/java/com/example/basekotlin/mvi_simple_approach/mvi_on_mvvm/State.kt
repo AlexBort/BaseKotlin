@@ -1,4 +1,4 @@
-package com.example.basekotlin.mvi_simple_approach
+package com.example.basekotlin.mvi_simple_approach.mvi_on_mvvm
 
 sealed class State<D> {
     class LoadingState<D> : State<D>()
