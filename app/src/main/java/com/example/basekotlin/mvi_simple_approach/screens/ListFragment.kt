@@ -16,6 +16,13 @@ class ListFragment : Fragment() {
 
     val model: ListViewModel by activityViewModels()
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        model.list.observe(this, {
+            binding.recyclerView
+        })
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
