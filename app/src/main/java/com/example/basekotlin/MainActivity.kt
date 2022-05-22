@@ -4,9 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.Menu
+import android.view.View.GONE
+import android.view.View.VISIBLE
+import android.widget.Toast
 import com.example.basekotlin.databinding.ActivityMainBinding
 //import com.example.basekotlin.databinding.ActivityMainBinding
 import com.example.basekotlin.databinding.TestMainActivityBinding
+import com.google.android.material.appbar.AppBarLayout
+import kotlin.math.abs
 
 
 class MainActivity : AppCompatActivity() {
@@ -26,14 +31,30 @@ class MainActivity : AppCompatActivity() {
 //            setDisplayHomeAsUpEnabled(true)
 //            setHomeButtonEnabled(true)
 //        }
-        binding.toolbar.title = getString(R.string.title)
-        binding.toolbar.subtitle = getString(R.string.sub_title)
+
         binding.toolbar.apply {
             inflateMenu(R.menu.test_menu)
         }
 //        binding.toolbar.setNavigationIcon(R.drawable.ic_baseline_clear_24)
         // todo: to add close button
         setSupportActionBar(binding.toolbar)
+
+        binding.appbar.addOnOffsetChangedListener ( AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
+            val toolbarCollapsed = abs(verticalOffset) >= appBarLayout.totalScrollRange
+            if (toolbarCollapsed) {
+//                binding.toolbar.setTitle(R.string.title)
+//                binding.toolbar.inflateMenu(R.menu.test_menu)
+                binding.title.visibility = GONE
+                binding.subtitle.visibility = GONE
+//                Toast.makeText(baseContext,"COLLAPSED",Toast.LENGTH_SHORT).show()
+            }
+            else {
+//                binding.toolbar.setTitle(" ")
+                binding.title.visibility = VISIBLE
+                binding.subtitle.visibility = VISIBLE
+//                Toast.makeText(baseContext,"NOT COLLAPSED",Toast.LENGTH_SHORT).show()
+            }
+            })
 
 // to add list with items
 
