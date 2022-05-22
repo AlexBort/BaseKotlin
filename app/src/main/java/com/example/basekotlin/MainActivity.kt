@@ -11,12 +11,12 @@ import com.example.basekotlin.databinding.TestMainActivityBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: TestMainActivityBinding
 //    private lateinit var binding: TestMainActivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = TestMainActivityBinding.inflate(layoutInflater)
 //        binding = TestMainActivityBinding.inflate(layoutInflater)
         val rootView = binding.root
         setContentView(rootView)
@@ -26,7 +26,8 @@ class MainActivity : AppCompatActivity() {
 //            setDisplayHomeAsUpEnabled(true)
 //            setHomeButtonEnabled(true)
 //        }
-        binding.toolbar.setTitle(R.string.test_name_toolbar)
+        binding.toolbar.title = getString(R.string.title)
+        binding.toolbar.subtitle = getString(R.string.sub_title)
         binding.toolbar.apply {
             inflateMenu(R.menu.test_menu)
         }
