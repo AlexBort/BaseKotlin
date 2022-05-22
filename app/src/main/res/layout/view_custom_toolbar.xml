@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.coordinatorlayout.widget.CoordinatorLayout">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/abl_mercury_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/ct_mercury_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleEnabled="false">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/chv_mercury_toolbar"
+                
+                android:layout_height="wrap_content"/>
+
+            <!--CustomHeaderView was inside of it-->
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_mercury_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_collapseMode="pin" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+</merge>
+
+    <!--<com.hermes.design.view.CustomHeaderView
+                    android:id="@+id/chv_mercury_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="?attr/actionBarSize"
+                    android:visibility="gone"
+                    tools:imageDrawable="@drawable/mercury_send"
+                    tools:visibility="visible" />-->
