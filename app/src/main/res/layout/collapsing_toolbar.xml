@@ -42,14 +42,15 @@
         app:srcCompat="@drawable/ic_kotlin" />-->
 
     <TextView
-        android:id="@+id/toolbarTitle"
+        android:id="@+id/collapsedTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="Kotlin"
+        android:text="Rate your courier"
         android:visibility="invisible"
         android:textStyle="bold"
+        android:alpha="0"
         android:textAllCaps="true"
         android:textColor="@color/black"
         android:textSize="19sp"
@@ -68,7 +69,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbarTitle" />
+        app:layout_constraintTop_toBottomOf="@id/collapsedTitle" />
 
     <View
         android:id="@+id/toolbarDivider"

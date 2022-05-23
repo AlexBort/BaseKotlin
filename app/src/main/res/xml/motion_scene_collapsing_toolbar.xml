@@ -18,6 +18,11 @@
 
             <KeyAttribute
                 android:alpha="0"
+                app:motionTarget="@id/collapsedTitle"
+                app:framePosition="40"/>
+
+            <KeyAttribute
+                android:alpha="0"
                 motion:framePosition="40"
                 motion:motionTarget="@id/title"/>
 
