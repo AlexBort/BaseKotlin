@@ -19,7 +19,7 @@
         app:tint="@color/black" />
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/expanded_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -30,36 +30,25 @@
         app:layout_constraintTop_toBottomOf="@id/backButton" />
 
 
-<!--    <ImageView
-        android:id="@+id/toolbarImageView"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="16dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_kotlin" />-->
-
     <TextView
         android:id="@+id/collapsedTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:alpha="0"
         android:gravity="center"
         android:text="Rate your courier"
-        android:visibility="invisible"
-        android:textStyle="bold"
-        android:alpha="0"
         android:textAllCaps="true"
         android:textColor="@color/black"
         android:textSize="19sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/sub_title"
+        android:id="@+id/expanded_sub_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -80,7 +69,7 @@
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sub_title" />
+        app:layout_constraintTop_toBottomOf="@id/expanded_sub_title" />
 
 
     <ScrollView

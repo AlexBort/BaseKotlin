@@ -24,7 +24,7 @@
             <KeyAttribute
                 android:alpha="0"
                 motion:framePosition="40"
-                motion:motionTarget="@id/title" />
+                motion:motionTarget="@id/expanded_title" />
 
         </KeyFrameSet>
 
