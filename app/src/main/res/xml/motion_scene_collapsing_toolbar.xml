@@ -19,6 +19,11 @@
             <KeyAttribute
                 android:alpha="0"
                 motion:framePosition="40"
+                motion:motionTarget="@id/title"/>
+
+            <KeyAttribute
+                android:alpha="0"
+                motion:framePosition="40"
                 motion:motionTarget="@id/sub_title" />
 
         </KeyFrameSet>

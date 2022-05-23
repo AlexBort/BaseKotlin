@@ -25,6 +25,7 @@
         android:layout_marginTop="12dp"
         android:text="Rate your local courier"
         android:textSize="16sp"
+        android:alpha="0"
         android:layout_marginStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
