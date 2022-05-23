@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@layout/activity_main_end"
+        motion:constraintSetStart="@layout/activity_main_start"
+        motion:duration="500">
+
+
+<!--        <OnClick
+            motion:clickAction="jumpToEnd"
+            motion:targetId="@+id/close_button"/>-->
+
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorId="@id/scroll"
+            motion:touchAnchorSide="top" />
+
+        <KeyFrameSet>
+
+            <KeyAttribute
+                android:alpha="0"
+                motion:framePosition="40"
+                motion:motionTarget="@id/title" />
+
+        </KeyFrameSet>
+
+
+    </Transition>
+
+</MotionScene>
+
+
+
+
+
+

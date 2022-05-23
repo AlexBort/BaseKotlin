@@ -3,6 +3,9 @@ package com.example.basekotlin
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.widget.ImageButton
+import android.widget.Toast
+import androidx.constraintlayout.motion.widget.MotionLayout
 
 
 class MainActivity : AppCompatActivity() {
@@ -12,6 +15,30 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_start)
 
+        val button = findViewById<ImageButton>(R.id.close_button)
+        val motion = findViewById<MotionLayout>(R.id.motion)
+        button.setOnClickListener {
+            motion.transitionToEnd()
+        }
+
+//        val motion = findViewById<MotionLayout>(R.id.motion)
+        motion.setTransitionListener(object : MotionLayout.TransitionListener {
+            override fun onTransitionStarted(p0: MotionLayout?, p1: Int, p2: Int) {
+                Toast.makeText(baseContext,"",Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, p3: Float) {
+                Toast.makeText(baseContext,"",Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onTransitionCompleted(p0: MotionLayout?, p1: Int) {
+                Toast.makeText(baseContext,"",Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onTransitionTrigger(p0: MotionLayout?, p1: Int, p2: Boolean, p3: Float) {
+                Toast.makeText(baseContext,"",Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
 //    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
