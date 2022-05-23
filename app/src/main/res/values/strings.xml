@@ -3,4 +3,5 @@
   <string name="test_name_toolbar">TEST NAME TOOLBAR</string>
   <string name="title">TITLE</string>
   <string name="sub_title">SUB TITLE</string>
+  <string name="test"></string>
 </resources>
